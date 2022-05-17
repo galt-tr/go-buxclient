@@ -1,4 +1,4 @@
-module github.com/BuxOrg/go-buxclient
+module github.com/galt-tr/go-buxclient
 
 go 1.17
 
