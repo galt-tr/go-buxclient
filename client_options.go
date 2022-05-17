@@ -3,7 +3,7 @@ package buxclient
 import (
 	"net/http"
 
-	"github.com/BuxOrg/go-buxclient/transports"
+	"github.com/galt-tr/go-buxclient/transports"
 )
 
 // WithXPriv will set xPrivString on the client

@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/BuxOrg/bux"
-	"github.com/BuxOrg/go-buxclient/transports"
+	"github.com/galt-tr/go-buxclient/transports"
 )
 
 // GetTransaction get a transaction by id

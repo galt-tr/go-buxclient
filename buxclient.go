@@ -7,8 +7,8 @@
 package buxclient
 
 import (
-	"github.com/BuxOrg/go-buxclient/transports"
 	"github.com/bitcoinschema/go-bitcoin/v2"
+	"github.com/galt-tr/go-buxclient/transports"
 	"github.com/libsv/go-bk/bec"
 	"github.com/libsv/go-bk/bip32"
 	"github.com/libsv/go-bk/wif"

@@ -10,8 +10,8 @@ import (
 
 	"github.com/BuxOrg/bux"
 	"github.com/BuxOrg/bux/utils"
-	"github.com/BuxOrg/go-buxclient/transports"
 	"github.com/bitcoinschema/go-bitcoin/v2"
+	"github.com/galt-tr/go-buxclient/transports"
 	"github.com/libsv/go-bt/v2"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
