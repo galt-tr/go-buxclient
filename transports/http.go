@@ -58,11 +58,13 @@ func (h *TransportHTTP) SetAdminKey(adminKey *bip32.ExtendedKey) {
 }
 
 // NewPaymail will register a new paymail
-func (h *TransportHTTP) NewPaymail(ctx context.Context, rawXpub, paymailAddress string, metadata *bux.Metadata) error {
+func (h *TransportHTTP) NewPaymail(ctx context.Context, rawXpub, paymailAddress, avatar, publicName string, metadata *bux.Metadata) error {
 	jsonStr, err := json.Marshal(map[string]interface{}{
-		FieldAddress:  paymailAddress,
-		FieldMetadata: processMetadata(metadata),
-		FieldXpubKey:  rawXpub,
+		FieldAddress:    paymailAddress,
+		FieldAvatar:     avatar,
+		FieldPublicName: publicName,
+		FieldMetadata:   processMetadata(metadata),
+		FieldXpubKey:    rawXpub,
 	})
 	if err != nil {
 		return err
@@ -387,6 +389,10 @@ func (h *TransportHTTP) DraftToRecipients(ctx context.Context, recipients []*Rec
 			FieldTo:       recipient.To,
 			FieldSatoshis: recipient.Satoshis,
 			FieldOpReturn: recipient.OpReturn,
+			"paymail_p4": map[string]string{
+				"from_paymail": "globalblockchainconvention@survey.britevue.com",
+				"note":         "Some satoshis for your thoughts",
+			},
 		})
 	}
 
